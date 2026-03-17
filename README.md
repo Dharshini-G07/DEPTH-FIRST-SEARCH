@@ -81,10 +81,10 @@ def bfs(graph,start,visited,path):
     while len(queue) != 0:
         tmpnode = queue.popleft()
         for neighbour in graph[tmpnode]:
-            if visited[neighbour] == False:
+            if visited[neighbour]==False:
                 path.append(neighbour)
                 queue.append(neighbour)
-                visited[neighbour] = True
+                visited[neighbour]=True
     return path
 
 graph = defaultdict(list)
@@ -94,7 +94,7 @@ for i in range(e):
     graph[u].append(v)
     graph[v].append(u)
 
-start = 'A'
+start = '0' if '0' in graph else 'A'
 path = []
 visited = defaultdict(bool)
 traversedpath = bfs(graph,start,visited,path)
@@ -117,7 +117,8 @@ G F <BR>
 
 <h3>Sample Output</h3>
 
-![Screenshot 2024-08-28 085910](https://github.com/user-attachments/assets/52354d53-f842-433d-b299-6012290a07d7)
+
+<img width="619" height="252" alt="image" src="https://github.com/user-attachments/assets/dfcdaa12-7306-4cca-b2f5-9cab412f29ad" />
 
 
 <h3>Sample Input</h3>
@@ -131,8 +132,7 @@ G F <BR>
 
 <h3>Sample Output</h3>
 
-![Screenshot 2024-08-28 085951](https://github.com/user-attachments/assets/7cd9a524-420d-4c0b-9cd4-5ea8b70b2e1e)
-
+<img width="495" height="199" alt="image" src="https://github.com/user-attachments/assets/21d7723f-bba0-41fe-8678-e775dc8ae88f" />
 
 
 <h3>Result:</h3>
